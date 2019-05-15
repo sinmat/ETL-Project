@@ -35,11 +35,3 @@ CREATE TABLE firearm_laws (
   total_laws INT
 );
 
--- Join the tables ON YEAR
-SELECT *
-FROM background_checks
-INNER JOIN mass_shootings
-ON background_checks.Year = mass_shootings.Year
-INNER JOIN firearm_laws
-ON background_checks.Year = firearm_laws.Year;
-
